@@ -11,7 +11,7 @@ public class App
 	public static final int Laddder =2 ;
 
     static int Position1=0;
-
+    static int count1=0;
     public static void main( String[] args )
     {
          while(Position1 != 100) {
@@ -20,8 +20,10 @@ public class App
         	 player1(Die_Num,Options);
          }
          System.out.println("Player Position : "+Position1);
-         if(Position1==100)
+         if(Position1==100) {
             System.out.println("Player1 wins");
+            System.out.println("Number of times dice rolled " +count1);
+         }
      }
     
     public static int player1(int Die_Num, int Options) {
@@ -50,6 +52,7 @@ public class App
                    break;
                 }
            }
+          count1++;
           return Position1;
       
      }
