@@ -6,11 +6,9 @@ package com.snakeladder;
  */
 public class App 
 {
-    static int Position1=0;
-
     public static void main( String[] args )
     {
-        System.out.println("Position of Player :"+Position1);
-        
+    	 int Die_Num=(int) ((Math.floor(Math.random()*10)%6)+1);
+         System.out.println("Die Number : "+Die_Num);        
     }
 }
