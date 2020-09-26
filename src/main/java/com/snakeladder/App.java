@@ -14,7 +14,7 @@ public class App
 
     public static void main( String[] args )
     {
-         while(Position1 != 100) {
+         while(Position1 < 100) {
         	 int Die_Num=(int) ((Math.floor(Math.random()*10)%6)+1);
              int Options = (int) Math.floor(Math.random()*10)%3;
         	 player1(Die_Num,Options);
