@@ -14,33 +14,42 @@ public class App
 
     public static void main( String[] args )
     {
-  	     int Die_Num=(int) ((Math.floor(Math.random()*10)%6)+1);
-         int Options = (int) Math.floor(Math.random()*10)%3;
-         
-         System.out.println("Die Number :" +Die_Num);
-         System.out.println("Check_Option :"+Options);
-         
-         switch(Options) {
-         case Laddder :    	  
-         {
-	        if(Position1 <=100 && (Position1+Die_Num) <=100 )
-	        Position1 = Position1 + Die_Num; 
-	        break;
-	  
+         while(Position1 != 100) {
+        	 int Die_Num=(int) ((Math.floor(Math.random()*10)%6)+1);
+             int Options = (int) Math.floor(Math.random()*10)%3;
+        	 player1(Die_Num,Options);
          }
-         case Snake :
-         {  
-	        if(Position1 >0 && (Position1-Die_Num)>0 )
-	        Position1=Position1-Die_Num;
-	        break;
-         } 
-        case No_Play :
-         {
-            Position1=Position1;
-            break;
-         }
+         System.out.println("Player Position : "+Position1);
      }
-   	     System.out.println("Position of Ladder : "+Position1);
+    
+    public static int player1(int Die_Num, int Options) {
+ 	   
+  	    System.out.println("Position of Ladder : "+Position1);
+        System.out.println("Die Number :" +Die_Num);
+        System.out.println("Check_Option :"+Options);
 
-    }
+        switch(Options) {
+                case Laddder :    	  
+                {
+      	        if(Position1 <=100 && (Position1+Die_Num) <=100 )
+      	        Position1 = Position1 + Die_Num; 
+      	        break;
+      	  
+                }
+                case Snake :
+                {  
+      	        if(Position1 >0 && (Position1-Die_Num)>0 )
+      	        Position1=Position1-Die_Num;
+      	        break;
+                } 
+               case No_Play :
+                {
+                   Position1=Position1;
+                   break;
+                }
+           }
+          return Position1;
+      
+     }
+         
 }
